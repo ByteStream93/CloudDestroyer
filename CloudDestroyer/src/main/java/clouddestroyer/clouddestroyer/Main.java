@@ -28,6 +28,8 @@ public class Main extends Application {
 
         GraphicDesign.gameTick();
 
+        //test
+
 
     }
 }
