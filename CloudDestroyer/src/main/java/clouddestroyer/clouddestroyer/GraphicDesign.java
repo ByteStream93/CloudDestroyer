@@ -7,6 +7,7 @@ public class GraphicDesign {
         Table.drawTable(Main.graphicsContext);
         Clouds.drawClouds(Main.graphicsContext);
         PlayerBar.drawBar(Main.graphicsContext);
+        Ball.drawBall(Main.graphicsContext);
 
     }
 
