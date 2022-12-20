@@ -5,6 +5,7 @@ public class GraphicDesign {
     public static void gameTick(){
 
         Table.drawTable(Main.graphicsContext);
+        Clouds.drawClouds(Main.graphicsContext);
 
     }
 
