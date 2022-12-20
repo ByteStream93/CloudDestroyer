@@ -12,7 +12,7 @@ public int cloud_y;
 
 public static ArrayList<Clouds> cloudsContainer = new ArrayList<>();
 
-static public int amountOfClouds = 75;
+static public int amountOfClouds = 150;
 
 
 Clouds(int cloud_x, int cloud_y){
