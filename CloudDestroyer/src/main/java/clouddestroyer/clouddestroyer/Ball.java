@@ -40,7 +40,7 @@ public class Ball {
     }
 
     public static void drawBall(GraphicsContext graphicsContext){
-
+        LogicBall.move();
         graphicsContext.setFill(Color.DARKORANGE);
 
         graphicsContext.fillRect(ball.get(0).ball_x*Table.fieldSizeWidth,ball.get(0).ball_y*Table.fieldSizeHeight,
