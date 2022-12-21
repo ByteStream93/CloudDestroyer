@@ -18,12 +18,7 @@ public class LogicBall {
 
        for ( int digit = 0; digit < Clouds.cloudsContainer.size(); digit++){
 
-           if(PlayerBar.bar.get(digit).getPlayerBar_x() == Ball.ball.get(0).ball_x && PlayerBar.bar.get(digit).getPlayerBar_y()-1 == Ball.ball.get(0).ball_y){
 
-            setMove_y(move_y*(-1));
-            setMove_x(move_x*(-1));
-
-           }
            //Upper and DownBorder of CloudsCheck
            if(Clouds.cloudsContainer.get(digit).getCloud_y()-1 == Ball.ball.get(0).ball_y && Clouds.cloudsContainer.get(digit).cloud_x == Ball.ball.get(0).ball_x ||
                    Clouds.cloudsContainer.get(digit).getCloud_y()+1 == Ball.ball.get(0).ball_y){
@@ -35,7 +30,7 @@ public class LogicBall {
            }
            //CloudsCheck sides
            if(Clouds.cloudsContainer.get(digit).getCloud_x()-1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y == Ball.ball.get(0).ball_y ||
-                   Clouds.cloudsContainer.get(digit).getCloud_x()+1 == Ball.ball.get(0).ball_x){
+                   Clouds.cloudsContainer.get(digit).getCloud_x()+1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y == Ball.ball.get(0).ball_y){
 
                setMove_y(move_x*(-1));
                Clouds.cloudsContainer.remove(Clouds.cloudsContainer.get(digit).cloud_x);
@@ -54,12 +49,21 @@ public class LogicBall {
 
            }
 
-           if(Ball.ball.get(0).ball_y == 45){
+           if(Ball.ball.get(0).ball_y == 44){
 
-               System.exit(0);
+
 
            }
 
+       }
+
+       for ( int digit = 0; digit < PlayerBar.bar.size(); digit++){
+           if(PlayerBar.bar.get(digit).getPlayerBar_x() == Ball.ball.get(0).ball_x && PlayerBar.bar.get(digit).getPlayerBar_y()-1 == Ball.ball.get(0).ball_y){
+
+               setMove_y(move_y*(-1));
+               setMove_x(move_x*(-1));
+
+           }
        }
 
     }

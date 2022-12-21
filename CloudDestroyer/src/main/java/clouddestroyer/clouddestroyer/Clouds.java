@@ -10,6 +10,7 @@ public class Clouds {
 public int cloud_x;
 public int cloud_y;
 
+public static int stop = 0;
 public static ArrayList<Clouds> cloudsContainer = new ArrayList<>();
 
 static public int amountOfClouds = 150;
@@ -29,13 +30,15 @@ Clouds(int cloud_x, int cloud_y){
 
       cloudsContainer.add(new Clouds(cloud_coordinate_x,cloud_coordinate_y));
 
+      stop = 1;
+
     }
  }
 
  public static void drawClouds(GraphicsContext graphicsContext){
     graphicsContext.setFill(Color.BLUE);
 
-    initializeClouds();
+
 
     for(int index = 0; index < cloudsContainer.size(); index++){
 

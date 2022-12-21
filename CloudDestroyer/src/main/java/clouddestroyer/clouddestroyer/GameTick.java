@@ -4,7 +4,7 @@ import javafx.animation.AnimationTimer;
 
 public class GameTick {
 
-    AnimationTimer animationTimer = new AnimationTimer() {
+    public static AnimationTimer animationTimer = new AnimationTimer() {
 
         long lastUpdate = 0;
 

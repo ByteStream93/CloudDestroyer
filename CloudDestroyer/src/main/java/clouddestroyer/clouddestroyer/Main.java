@@ -33,7 +33,7 @@ public class Main extends Application {
         primaryStage.setScene(gameScene);
         primaryStage.show();
 
-        GraphicDesign.gameTick();
+        GameTick.animationTimer.start();
 
 
 
