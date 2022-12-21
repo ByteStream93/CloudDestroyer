@@ -15,6 +15,7 @@ public class GraphicDesign {
         }
 
         Clouds.drawClouds(Main.graphicsContext);
+        HighScore.drawingHighscore(Main.graphicsContext);
 
     }
 

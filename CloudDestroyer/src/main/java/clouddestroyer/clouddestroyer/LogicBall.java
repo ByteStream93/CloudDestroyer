@@ -23,6 +23,8 @@ public class LogicBall {
            if (Clouds.cloudsContainer.get(digit).getCloud_y() - 1 == Ball.ball.get(0).ball_y && Clouds.cloudsContainer.get(digit).cloud_x == Ball.ball.get(0).ball_x ||
                    Clouds.cloudsContainer.get(digit).getCloud_y() + 1 == Ball.ball.get(0).ball_y && Clouds.cloudsContainer.get(digit).cloud_x == Ball.ball.get(0).ball_x) {
 
+               HighScore.score++;
+
                setMove_y(move_y * (-1));
                Clouds.cloudsContainer.remove(Clouds.cloudsContainer.get(digit));
                break;
@@ -32,6 +34,8 @@ public class LogicBall {
            if (Clouds.cloudsContainer.get(digit).getCloud_x() - 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y == Ball.ball.get(0).ball_y ||
                    Clouds.cloudsContainer.get(digit).getCloud_x() + 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y == Ball.ball.get(0).ball_y) {
 
+               HighScore.score++;
+
                setMove_y(move_x * (-1));
                Clouds.cloudsContainer.remove(Clouds.cloudsContainer.get(digit));
                break;
@@ -40,20 +44,20 @@ public class LogicBall {
            if (Clouds.cloudsContainer.get(digit).getCloud_x() - 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y - 1 == Ball.ball.get(0).ball_y ||
                    Clouds.cloudsContainer.get(digit).getCloud_x() - 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y + 1 == Ball.ball.get(0).ball_y) {
 
-
+               HighScore.score++;
                Clouds.cloudsContainer.remove(Clouds.cloudsContainer.get(digit));
                break;
            }
            if (Clouds.cloudsContainer.get(digit).getCloud_x() + 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y - 1 == Ball.ball.get(0).ball_y ||
                    Clouds.cloudsContainer.get(digit).getCloud_x() + 1 == Ball.ball.get(0).ball_x && Clouds.cloudsContainer.get(digit).cloud_y + 1 == Ball.ball.get(0).ball_y) {
 
-
+                HighScore.score++;
                Clouds.cloudsContainer.remove(Clouds.cloudsContainer.get(digit));
                break;
            }
        }
 
-        if(Ball.ball.get(0).ball_x == 1 || Ball.ball.get(0).ball_x == 74){
+        if(Ball.ball.get(0).ball_x == 0 || Ball.ball.get(0).ball_x == 74){
 
             setMove_x(move_x*(-1));
 
