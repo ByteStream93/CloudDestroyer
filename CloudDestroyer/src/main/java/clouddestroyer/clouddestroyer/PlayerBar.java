@@ -17,6 +17,8 @@ public class PlayerBar {
 
     }
 
+
+
     public static ArrayList<PlayerBar> bar = new ArrayList<>(){{
 
         add(new PlayerBar(34,45));
