@@ -43,7 +43,7 @@ public class Ball {
         LogicBall.move();
         graphicsContext.setFill(Color.DARKORANGE);
 
-        graphicsContext.fillRect(ball.get(0).ball_x*Table.fieldSizeWidth,ball.get(0).ball_y*Table.fieldSizeHeight,
+        graphicsContext.fillOval(ball.get(0).ball_x*Table.fieldSizeWidth,ball.get(0).ball_y*Table.fieldSizeHeight,
                 Table.fieldSizeWidth,Table.fieldSizeHeight);
     }
 
