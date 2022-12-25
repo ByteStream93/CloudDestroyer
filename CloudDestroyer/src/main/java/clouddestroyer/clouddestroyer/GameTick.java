@@ -10,7 +10,9 @@ public class GameTick {
 
         @Override
         public void handle(long now) {
+            
             if (now - lastUpdate >= 66666666) {
+                
                 GraphicDesign.gameTick();
                 lastUpdate = now;
 
