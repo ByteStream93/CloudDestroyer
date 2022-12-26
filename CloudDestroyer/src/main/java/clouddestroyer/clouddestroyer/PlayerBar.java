@@ -51,6 +51,7 @@ public class PlayerBar {
         graphicsContext.setFill(Color.DARKGREY);
 
         for(int index = 0; index < bar.size(); index++){
+            
             graphicsContext.fillRect(bar.get(index).playerBar_x*Table.fieldSizeWidth,bar.get(index).playerBar_y*Table.fieldSizeHeight,
             Table.fieldSizeWidth,Table.fieldSizeHeight);
         }
